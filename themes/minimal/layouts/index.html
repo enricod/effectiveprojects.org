@@ -1,0 +1,28 @@
+{{ partial "header" . }}
+
+<main>
+    <div class="intro">
+        {{ with .Site.Params.profilePic }} <img class="profile" src="{{ . }}"> {{ end }}
+        <h1>{{ .Site.Title }}</h1>
+        <h3>{{ markdownify .Site.Params.Description }}</h3>
+
+        <p>The implementation of new software systems is more and more complex because the types 
+            and quantities of data to be migrated is increasing exponentially as well as the 
+            complexity of business needs and processes that those software solutions are intended to support.</p>
+        <p>Hence, migrating to a new system requires good project management to ensure the project goals are 
+            achieved within defined times and budgets.</p>
+        <p>Many times we have found ourselves struggling to update project plans, keep them in sync with 
+            those of other project team members, spending more time on keeping records of project progresses rather than progressing on the project itself.</p>
+        <p>EffectiveProject is all about keeping focus on project goals by sharing methodologies, 
+            best practises and tools to get project management activities lighter and keeping the 
+            highest levels of progress tracking as well as minimizing the times required to manage 
+            fundamental activities such as resources allocation, recording and reporting time spent, 
+            billing and issue tracking.</p>
+        <p>Please, visit <a 
+            href="https://support.effectiveprojects.org/">Support</a></p>
+
+        {{ with .Content }} <div class="homepage-content text-justify">{{ . }}</div> {{ end }}
+    </div>
+</main>
+
+{{ partial "footer" . }}
